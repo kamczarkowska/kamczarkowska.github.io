@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twoje Imię | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Nawigacja */
+        nav {
+            background: #2c3e50;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #3498db;
+        }
+        
+        /* Sekcja hero */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Sekcje */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+        
+        /* Usługi */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        /* Portfolio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .portfolio-item {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #ddd;
+        }
+        
+        .portfolio-item .content {
+            padding: 1.5rem;
+        }
+        
+        .portfolio-item h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Kontakt */
+        #kontakt {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+        
+        #kontakt h2 {
+            color: white;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: #aaa;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Start</a></li>
+            <li><a href="#uslugi">Usługi</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Cześć, jestem [Twoje Imię]</h1>
+        <p>Projektuję [wpisz czym się zajmujesz - np. strony internetowe, grafiki, aplikacje]. 
+           Pomagam firmom wyróżnić się w sieci.</p>
+    </section>
+
+    <section id="uslugi">
+        <h2>Moje Usługi</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🎨 Usługa 1</h3>
+                <p>Opis twojej pierwszej usługi. Co oferujesz i jakie korzyści daje klientowi.</p>
+            </div>
+            <div class="service-card">
+                <h3>💻 Usługa 2</h3>
+                <p>Opis drugiej usługi. Wyjaśnij, jak pomagasz swoim klientom.</p>
+            </div>
+            <div class="service-card">
+                <h3>🚀 Usługa 3</h3>
+                <p>Opis trzeciej usługi. Podkreśl swoje unikalne podejście.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>Moje Projekty</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="[via.placeholder.com](https://via.placeholder.com/400x200/667eea/ffffff?text=Projekt+1)" alt="Projekt 1">
+                <div class="content">
+                    <h3>Nazwa Projektu 1</h3>
+                    <p>Krótki opis projektu i zastosowanych technologii.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="[via.placeholder.com](https://via.placeholder.com/400x200/764ba2/ffffff?text=Projekt+2)" alt="Projekt 2">
+                <div class="content">
+                    <h3>Nazwa Projektu 2</h3>
+                    <p>Krótki opis projektu i zastosowanych technologii.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="[via.placeholder.com](https://via.placeholder.com/400x200/3498db/ffffff?text=Projekt+3)" alt="Projekt 3">
+                <div class="content">
+                    <h3>Nazwa Projektu 3</h3>
+                    <p>Krótki opis projektu i zastosowanych technologii.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <p style="margin-bottom: 2rem;">Zainteresowany współpracą? Napisz do mnie!</p>
+        <div class="contact-info">
+            <div>📧 <a href="mailto:twoj@email.com">twoj@email.com</a></div>
+            <div>📱 +48 123 456 789</div>
+            <div>💼 <a href="[linkedin.com](https://linkedin.com/in/twoj-profil)" target="_blank">LinkedIn</a></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 [Twoje Imię]. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+</body>
+</html>
